@@ -100,7 +100,6 @@ public class BetterValidatingInputs {
     }
 
     public static void main(String[] args) {
-        Scanner kbd = new Scanner(System.in);
         double c = getInitial();
         double r = getInterest();
         int t = getTime();
