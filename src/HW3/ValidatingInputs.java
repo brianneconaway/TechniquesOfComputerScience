@@ -60,7 +60,7 @@ int n = 0;
             System.exit(1);
         }
 
-        System.out.print("Enter a number of times to compound per year as a decimal: ");
+        System.out.print("Enter a number of times to compound per year: ");
         if (kbd.hasNextInt()) { //checking type
             n = kbd.nextInt();
             if (n < 0) { // checking if the IR is neg
@@ -70,7 +70,6 @@ int n = 0;
         } else { //Checks to see if it printed a string
             System.out.println("Error: integer expected. You entered  " + kbd.next());
             System.exit(1);
-
 
         }
         System.out.println(investment(c, r, t, n));
