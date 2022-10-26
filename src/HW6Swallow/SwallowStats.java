@@ -2,7 +2,7 @@
 HW6
 10-11-22
  */
-package HW6;
+package HW6Swallow;
 
 import java.io.IOException;
 import java.net.URL;

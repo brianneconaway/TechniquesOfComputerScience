@@ -64,7 +64,6 @@ public class LoopExercises {
     public static int sum3or5(int n) {
         int sum = 0;
 
-
         for (int i = 0; i < n; i++) {
             if (i % 3 == 0 || i % 5 == 0)
                 sum = sum + i;
@@ -88,7 +87,12 @@ public class LoopExercises {
      *           remove it?
      */
     public static long factor(long n) {
-        return -1; // shut up error message
+        for (long i = 2; i <= n-1; i++){
+            if (n%i == 0){
+                return i;
+            }
+        }
+        return -1;
     }
 
     /*
@@ -100,8 +104,16 @@ public class LoopExercises {
      * Question: Why is this a void function?
      */
     public static void stars(int n) {
-        // fill in code
+        int count = 0;
+        while (count < n) {
+            count++;
+            System.out.print("*");
+        }
+        System.out.println();
     }
+
+
+
 
     /*
      * Write a function triangle that takes an integer n and will print
@@ -119,7 +131,15 @@ public class LoopExercises {
      *  Hint: use the function stars you defined above.
      */
     public static void triangle(int n) {
-        // fill in code
+        int count = 1;
+        while (count <= n){
+            for (int i = 0; i < count; i++){
+                System.out.print("*");
+
+            }
+            System.out.println();
+            count++;
+        }
     }
 
     /*
@@ -140,7 +160,19 @@ public class LoopExercises {
      *
      */
     public static void fizzbuzz(int n) {
-        // fill in code
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 != 0) {
+                System.out.print("fizz, ");
+            }
+            if (i % 5 == 0 && i % 3 != 0) {
+                System.out.print("buzz, ");
+            }
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print("fizzbuzz, ");
+            }
+            if (i % 3 != 0 && i % 5 != 0)
+                System.out.print( i + ", ");
+        }
     }
 
     /*
@@ -153,8 +185,19 @@ public class LoopExercises {
      *
      */
     public static boolean isPalindrome(int n) {
-        return false; // shut up error message
-    }
+        int count = 0;
+        int m = n;
+        while (m>0){
+            m=(m/10);
+            count++;
+        }
+        for (int i = 1; ; i++){
+            //if (n/){
+                return true;
+        }//else {
+            //return false;
+        }
+    //}
 
     /*
      * This function is similar to the triangle function; but a little trickier.
@@ -173,7 +216,20 @@ triangle
 asterisks.
      */
     public static void staircase(int n) {
-        // fill in code here
+        int count = 0;
+        int count1 = n;
+        while (count <= n) {
+            for (int i = 0; i < count1; i++) {
+                System.out.print(" ");
+
+            }
+            for (int i = 0; i < count; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            count++;
+            count1--;
+        }
     }
 
     /*
@@ -196,7 +252,12 @@ n
      *   perfect(99) == false
      */
     public static boolean perfect(int n) {
-        return false;   // shut up error message
+        int count = 0;
+        for (int i = 0; i <= n-1; i++){
+            //if ((i%n==0) && ()){
+
+            }
+        return false;
     }
 
     /*
@@ -221,5 +282,10 @@ n
         System.out.println(count7s(97172177)==4);
         System.out.println(count7s(111111)==0);
         System.out.println(sum3or5(10)==23);
+        stars(5);
+        triangle(5);
+        System.out.println((factor(7)==-1));
+        fizzbuzz(16);
+        staircase(7);
     }
 }

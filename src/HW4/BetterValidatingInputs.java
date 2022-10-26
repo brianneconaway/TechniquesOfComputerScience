@@ -17,7 +17,6 @@ public class BetterValidatingInputs {
                 else{
                     return c;
                 }
-
             } else{
                 System.out.println("Error: integer expected. You entered " + kbd.next());
                 System.out.println("Enter initial deposit rate as decimal: ");
